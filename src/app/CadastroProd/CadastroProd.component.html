@@ -1,0 +1,36 @@
+<form>
+  <div class="form-group">
+    <div class="mb-3">
+      <label>Nome do Produto:</label>
+      <input class="form-control form-control-sm" type="text" id="Nome" [(ngModel)]="produto.Nome" name="Nome" placeholder="Nome do Produto" aria-label=".form-control-sm example">
+    </div>
+    <div class="mb-3">
+      <label>Preço de Venda:</label>
+      <input class="form-control form-control-sm" type="text" id="Preco" [(ngModel)]="produto.Preco" name="Preco" placeholder="Preço" aria-label=".form-control-sm example">
+    </div>
+    <div class="mb-3">
+      <label>Descrição:</label>
+      <input class="form-control form-control-sm" type="text" id="Descricao" [(ngModel)]="produto.Descricao" name="Descricao" placeholder="Descrição" aria-label=".form-control-sm example">
+    </div>
+    <div class="mb-3">
+      <label>Qtde:</label>
+      <input class="form-control form-control-sm" type="text" id="Quantidade" [(ngModel)]="produto.Quantidade" name="Quantidade" placeholder="Qtde" aria-label=".form-control-sm example">
+    </div>
+    <div class="mb-3">
+      <label>Tipo:</label> <br>
+      <input class="form-control form-control-sm" list="datalistOptions" id="lstTipo" [(ngModel)]="produto.Tipo" name="Tipo" placeholder="Selecione uma opção:">
+      <datalist id="datalistOptions">
+        <option value="Orgânico">
+        <option value="Não Orgânico">      
+      </datalist>
+    </div>
+    <div class="mb-3">
+      <label>Data de Cadastro:</label>
+      <input type="date" id="DtCadastro" [(ngModel)]="produto.DtCadastro" name="DtCadastro"/>
+      <div class="col-auto">
+        <button type="button" (click)="Salvar()"  class="btn btn-primary mb-3">Salvar</button>
+      </div>
+    </div>
+  </div>
+  
+</form>
